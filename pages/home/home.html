@@ -15,23 +15,25 @@
   <img src="https://cdn.jsdelivr.net/gh/alexanderlitonjua/exams@master/car.jpg">
   <br />
 
-<ion-item>
-  <ion-label> Vehicle Price: </ion-label>
-  <ion-input type="number" [(ngModel)] = "price" ></ion-input>
-</ion-item>
-<ion-item>
-  <ion-label> Loan Term (months): </ion-label>
-  <ion-input type="number" [(ngModel)] ="months"></ion-input>
-</ion-item>
-<ion-item>
-  <ion-label> Downpayment percentage: </ion-label>
-  <ion-input type="number" [(ngModel)] ="Downpayment"></ion-input>
-</ion-item>
-<button ion-button color= "secondary" (click)= calculateLOAN()>Calculate</button>
+  <ion-item>
+    <ion-label> Vehicle Price: </ion-label>
+    <ion-input type="number" [(ngModel)] = "price" ></ion-input>
+  </ion-item>
 
-<ion-item *ngIf = "downpaymentamount">
-  <h2> Your downpayment amount is: {{downpayment}} </h2>
-  <h2> Your loan amount is: {{loanamount}}  </h2>
-  <h2> Your monthly payment is: {{monthlypayment}}  </h2>
-</ion-item>
+  <ion-item>
+    <ion-label> Loan Term (months): </ion-label>
+    <ion-input type="number" [(ngModel)] ="months"></ion-input>
+  </ion-item>
+
+  <ion-item>
+   <ion-label> Downpayment percentage: </ion-label>
+    <ion-input type="number" [(ngModel)] ="Downpayment"></ion-input>
+  </ion-item>
+  <button ion-button color= "secondary" (click)= calculateLOAN()>Calculate</button>
+
+  <ion-item *ngIf = "downpaymentamount">
+    <h2> Your downpayment amount is: {{downpayment}} </h2>
+    <h2> Your loan amount is: {{loanamount}}  </h2>
+    <h2> Your monthly payment is: {{monthlypayment}}  </h2>
+  </ion-item>
 </ion-content>
