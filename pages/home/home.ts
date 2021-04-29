@@ -16,6 +16,7 @@ export class HomePage {
   interest:number;
   totalinterest:number;
     constructor(public navCtrl: NavController) {}
+    
     calculateLoan() {
 
       this.downpaymentamount = (this.price*this.downpayment) / 100
